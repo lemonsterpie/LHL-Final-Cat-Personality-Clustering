@@ -24,7 +24,7 @@ At this point the data has 51 personality traits. I reduced the data's dimension
 
 (image)
 
-I then performed FA to find 
+I then performed FA to find te 
 
 
 - recommender
