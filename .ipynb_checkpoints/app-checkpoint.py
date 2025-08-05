@@ -1,4 +1,17 @@
 import streamlit as st
+import pandas as pd 
+from recommender import model_functions as mf 
+
+data = pd.read_csv('../data/data_reduced.csv')
+factors = ['Factor1', 'Factor2', 'Factor3', 'Factor4']
+means, stds, max_dists_sq = mf.compute_traits(data, factors)
+
+st.set_page_config( #base information for our page
+    page_title="PlentyofCats",
+    page_icon=":cat:",
+    layout="centered"
+)
+
 st.title('Plenty of Cats:cat::smile_cat::smiley_cat::heart_eyes_cat::smirk_cat::kissing_cat:')
 st.header("Welcome!")
 st.write("This is a recommender engine for cat owners looking to adopt another cat.")
