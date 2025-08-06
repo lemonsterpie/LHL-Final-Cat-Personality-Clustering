@@ -47,25 +47,22 @@ trait_mappings = {
 st.markdown("### Anxiety/Confidence")
 factor1 = st.slider("Factor1", min_value=1, max_value=7, label_visibility='collapsed')
 st.markdown("How nervous your cat is. A higher score means that you cat is shy, fearful, and insecure; likely to hide and avoid strangers. A lower score means that they are confident and trusting; unbothered by new people or environments.")
-check1 = st.checkbox("Find opposites", key='check1')
 
 st.markdown('### Social Dominance')
 factor2 = st.slider("Factor2", min_value=1, max_value=7, label_visibility='collapsed')
 st.markdown("How assertive your cat is in social situations. A higher score means that they are more bold, territorial, or even aggressive to other cats. A lower score means they are easygoing and likely get along well with other cats.")
-check2 = st.checkbox("Find opposites", key='check2')
 
 st.markdown('### Activity level')
 factor3 = st.slider("Factor3", min_value=1, max_value=7, label_visibility='collapsed')
 st.markdown("A higher score means a curious, active, and playful cat. A lower score means a calmer, passive cat")
-check3 = st.checkbox("Find opposites", key='check3')
 
 st.markdown('### Social Reactivity')
 factor4 = st.slider("Factor4", min_value=1, max_value=7, label_visibility='collapsed')
-check4 = st.checkbox("Find opposites", key='check4')
 
 user = [factor1, factor2, factor3, factor4]
 
-number = st.number_input("How many cats:", value=10, step=1, icon="🚨")
+st.markdown("#### Number of recommendations:")
+number = st.number_input("How many cats:", value=10, step=1, key='count', label_visibility='collapsed')
 
 advanced = st.toggle("Advanced mode", key='advanced')
 
@@ -104,32 +101,10 @@ else:
     same_traits = []
     different_traits = []
 
-    if check1:
-        different_traits.append("Factor1")
-    else:
-        same_traits.append("Factor1")
-
-    if check2:
-        different_traits.append("Factor2")
-    else:
-        same_traits.append("Factor2")
-
-    if check3:
-        different_traits.append("Factor3")
-    else:
-        same_traits.append("Factor3")
-
-    if check4:
-        different_traits.append("Factor4")
-    else:
-        same_traits.append("Factor4")
-
     if start:
         results = rf.recommend(
         user,
         data,
-        same_traits=same_traits,
-        different_traits=different_traits,
         n_recs=number,
         sex=sex_filter
     )
