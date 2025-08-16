@@ -1,0 +1,8 @@
+streamlit 
+pandas 
+numpy 
+recommender
+scikit-learn 
+matplotlib.pyplot 
+seaborn 
+os 
