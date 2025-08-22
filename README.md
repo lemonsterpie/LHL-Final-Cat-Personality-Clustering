@@ -39,5 +39,8 @@ Access the recommender [here](https://plentyofcats.streamlit.app).
 GUI:
 
 <img width="755" height="606" alt="image" src="https://github.com/user-attachments/assets/14af1214-0599-4cb9-aa04-87327492a322" />
+<img width="775" height="636" alt="image" src="https://github.com/user-attachments/assets/3c0f4c30-358a-4302-9cd9-18678c155c06" />
+<img width="763" height="316" alt="image" src="https://github.com/user-attachments/assets/4f5dc9cd-9a5c-48fc-a6fe-815f60b8580d" />
+
 
 
